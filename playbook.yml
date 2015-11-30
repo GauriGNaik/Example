@@ -1,5 +1,5 @@
 ---
-- hosts: digitalocean
+- hosts: all
   vars_files:
     - vars.yml
   sudo: true
