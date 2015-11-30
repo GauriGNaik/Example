@@ -8,5 +8,3 @@ system_packages:
   - nodejs
   - npm
   - git
-
-

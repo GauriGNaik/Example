@@ -15,5 +15,5 @@
     - name: Linking nodejs to run as node 
       file: src=/usr/bin/nodejs dest=/usr/bin/node state=link
       
-    - name: Intall forever globally
+    - name: Install forever globally
       npm: name=forever global=yes state=latest
