@@ -1,5 +1,0 @@
-#!/bin/bash
-PATH=/var/projects/mysampleproject/example
-NPM_PATH=/usr/bin/npm
-cd $PATH && $NPM_PATH install
-exit 0

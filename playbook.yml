@@ -13,4 +13,7 @@
       with_items: "{{ system_packages }}"
       
     - name: Linking nodejs to run as node 
-      command: ln -s /usr/bin/nodejs /usr/bin/node
+      file: src=/usr/bin/nodejs dest=/usr/bin/node state=link
+      
+    - name: Intall forever globally
+      npm: name=forever global=yes state=latest
