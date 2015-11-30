@@ -10,8 +10,8 @@
       git: repo={{ project_repo }} dest={{ project_root }} accept_hostkey=true
       
     - name: install npm
-      npm: path=/var/projects/mysampleproject/example
+      npm: path=/var/projects/example
       
     - name: run the app
-      command: forever start /var/projects/mysampleproject/example/app_with_feature.js 162.243.109.180
+      command: forever start /var/projects/example/app_with_feature.js 162.243.109.180
    
