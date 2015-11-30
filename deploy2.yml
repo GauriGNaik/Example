@@ -1,0 +1,24 @@
+---
+- hosts: digitalocean
+  vars_files:
+    - vars.yml
+  sudo: true
+  sudo_user: root
+
+  tasks:  
+    - name: clone project repo in destination
+      git: repo={{ project_repo }} dest={{ project_root }}/code/ accept_hostkey=true
+      
+    - name: Change permissions for install NPM script
+      command: chmod +x /var/projects/mysampleproject/example/installNPM.sh
+      
+    - name: Change permissions for running node app script
+      command: chmod +x /var/projects/mysampleproject/example/executeNodeApp.sh
+      
+    - name: Execute the script for npm install
+      command: sh /var/projects/mysampleproject/example/installNPM.sh
+
+    - name: Execute the script for running node app
+      command: sh /var/projects/mysampleproject/example/executeNodeApp.sh
+    
+    
