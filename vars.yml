@@ -8,3 +8,5 @@ system_packages:
   - nodejs
   - npm
   - git
+  - redis-server
+  - redis-tools
